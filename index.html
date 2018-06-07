@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Сайт визитка.</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		function clock() {
+		var d = new Date();
+		var day = d.getDate();
+		var hours = d.getHours();
+		var minutes = d.getMinutes();
+		var seconds = d.getSeconds();
+
+		if (day <= 9) day = "0" + day;
+		if (hours <= 9) hours = "0" + hours;
+		if (minutes <= 9) minutes = "0" + minutes;
+		if (seconds <= 9) seconds = "0" + seconds;
+
+		date_time = + hours + ":" + minutes + ":" + seconds;
+		if (document.layers) {
+ 		document.layers.doc_time.document.write(date_time);
+ 		document.layers.doc_time.document.close();
+		}
+		else document.getElementById("doc_time").innerHTML = date_time;
+ 		setTimeout("clock()", 1000);
+		}
+	</script>
+	<script>
+		 document.ondragstart = test; 
+document.onselectstart = test; 
+document.oncontextmenu = test; 
+function test() { 
+return false; 
+} 
+document.oncontextmenu; 
+function catchControlKeys(event){ 
+var code=event.keyCode? event.keyCode : event.which? event.which : null;  
+} 
+	</script>
+</head>
+<body oncopy="return false" onkeypress="return catchControlKeys(event)">
+	<div id="particles-js"></div>
+	<div id="page-wrapper">
+		<div id="page-preloader" class="preloader">
+		<div class="loader"></div>
+	</div>
+	<audio id="player" autoplay loop >
+     	<source src="audio/audioplay.wav">
+	</audio>
+	<section data-bleed="25" data-speed="0.1" data-parallax="scroll" data-image-src="images/bg-header.jpg" class="header-index">
+	<div class="container">
+			<div style="margin-top: 2rem;" class="wrap-block-controls">
+				<button style="background: none;" onclick="document.getElementById('player').play()">
+				<i class="fas fa-play"></i>
+			</button>
+			<button style="background: none;" onclick="document.getElementById('player').pause()">
+				<i class="fas fa-pause"></i>
+			</button>
+			<small class="span-block-time" style="color: #fff; font-family: Proggy; font-size: 1.7rem; margin-left: 3rem;" id="doc_time">
+			</small>
+			</div>
+	</div>
+		<div class="container text-center header-avatar">
+			<div class="row">
+				<div class="col-xs-12">
+					<img src="images/avatar-header.png" alt="Avatar">
+				</div>
+			</div>
+		</div>
+
+		<div class="container header-title">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>KINGUINMLG</h1>
+					<p>
+						Lorem ipsum dolor sit amet.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container text-center header-contacts">
+			<div class="row">
+				<div class="col-sm-12 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+					<p>
+						<a target="_blank" href="https://steamcommunity.com/id/mlgproject/"><img src="images/steam-ico.png" alt="Steam"></a>
+						<a target="_blank" href="#"><img src="images/vk-ico.png" alt="VK"></a>
+						<a target="_blank" href="#"><img src="images/telegram-ico.png" alt="Telegram"></a>
+						<a target="_blank" href="#"><img src="images/facebook-ico.png" alt="Facebook"></a>
+						<a target="_blank" href="#"><img src="images/youtube-ico.png" alt="Youtube"></a>
+						<a target="_blank" href="#"><img src="images/twitch-ico.png" alt="Twitch"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container header-btn">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
+					<button class="btn-submit popup-btn">
+						Написать мне
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container header-about">
+	<h1>Lorem ipsum.</h1>
+		<div class="row">
+			<div class="col-sm-7 col-xs-12">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita consequuntur distinctio vitae laborum a! Ad tenetur voluptatum, itaque, ab placeat, eveniet similique accusamus quod alias qui cupiditate expedita mollitia officia architecto sint saepe labore quisquam asperiores, ex blanditiis libero autem ea et quibusdam. Quis dolor adipisci consequatur consequuntur nemo in voluptate fugiat cum et maiores sapiente eius praesentium suscipit commodi ipsa, dignissimos impedit nesciunt magnam, animi accusamus saepe. Neque.
+					</p>
+			</div>
+		</div>
+		<div style="margin-top: 2.5rem; margin-bottom: 10rem;" class="row">
+			<div class="col-sm-6 col-sm-offset-6">
+				<h1>Lorem ipsum dolor sit.</h1>
+				<p>
+					Клавиатура - <br>
+					Мышь - <br>
+					Корпус - <br>
+					Процессор - <br>
+					Мат.Плата - <br>
+					ОЗУ - <br>
+					Коврик - <br>
+					Микрофон - <br>
+				</p>
+			</div>
+		</div>
+</div>
+</section>
+
+<!-- Модальное окно с формой Начало -->
+	<div class="popup">
+		<!-- Фон модального окна -->
+		<div class="popup-dialog">
+			<!-- Контент модального окна -->
+			<div class="popup-content">
+				<h1>Написать мне</h1>
+				<button class="popup-close">
+					×
+				</button>
+				<div class="popup-form offer-form">	
+					<div class="wrap-popup-form">
+						<div class="wrap-form">
+						<form action="mailer/smart.php" method="POST">
+							<input id="pochta" name="user_pochta" type="email" placeholder="* Почта" required>
+							<textarea placeholder="* Сообщение" name="user_message" rows="3" required></textarea>
+							<p style="text-align: left; font-size: 1.2rem; font-family: Evolve Thin; color: #fff;">
+								Заполняя форму, вы автоматически <span style="font-family: Evolve Bold">соглашаетесь на
+								обработку персональных данных.</span>
+							</p>
+							<button class="btn-submit-popup">Отправить</button>
+						</form>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно с формой Конец -->
+
+<footer class="footer-card">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-5 col-xs-offset-0">
+				<p style="margin-top: 1.5rem;">
+					<a target="_blank" href="#">
+						<img src="images/qiwi-name.png" alt="Поддержать меня. QIWI."><br><small style="font-family: Proggy; color: #fff; letter-spacing: 0.3px;">Поддержать меня.</small>
+					</a>
+				</p>
+			</div>
+			<div class="wrap-block-title">
+				<h2>Copyright © 2018<br><span style="font-size: 1.2rem;">All rights reserved</span></h2>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
+<script type="text/javascript">
+ clock();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/preloader.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.popup-btn').on('click', function(event){
+			event.preventDefault();
+			$('.popup').fadeIn(700);
+		});
+		$('.popup-close').on('click', function(event) {
+			event.preventDefault();
+			$('.popup').fadeOut(200);
+		});
+});
+</script>
+<script>
+	if ($(window).width() > 480) {
+  	var script = document.createElement('script');
+  	script.src = 'js/parallax.min.js';
+  	document.head.appendChild(script);
+}
+</script>
+<script src="js/parallax.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
